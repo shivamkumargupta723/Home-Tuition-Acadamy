@@ -1,0 +1,258 @@
+@media (min-width: 992px) {}
+
+@media (min-width: 768px) {
+    .navbar-nav > li > a {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu {
+        background-color: #fff;
+        padding: 0;
+        border-radius: 0;
+        min-width: 200px;
+        text-align: center;
+    }
+
+    .dropdown-menu li a {
+        padding: 10px;
+        color: #eb1736 !important;
+    }
+    
+    .dropdown-menu li a:hover {
+        color: #fff !important;
+    }
+    
+    .dropdown-menu a::after {
+        background: #eb1736 !important;
+    }
+
+
+    /* two level dropdown */
+    .level_2 {
+        position: relative;
+    }
+
+    .level_2 ul {
+        position: absolute;
+        right: 100%;
+        top: 0;
+        width: 100%;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+        list-style: none;
+        background-color: #fff;
+        padding: 0;
+        border-radius: 0;
+        min-width: 200px;
+        text-align: center;
+        display: none;
+    }
+
+    .level_2:hover ul {
+        display: block;
+    }
+
+    /* //two level dropdown */
+}
+
+@media (max-width: 991px) {
+
+    html {
+        font-size: 14px;
+    }
+    
+    .home-features {
+        min-height: auto;
+    }
+    
+    .testimonials_box {
+        margin-top: 30px;
+    }
+
+    .curvy-mask::before {
+        display: none;
+    }
+
+    .section-title p::after {
+        display: none;
+    }
+
+    #home-banner {
+        padding: 50px 0;
+    }
+
+    .banner-form {
+        margin-bottom: 30px;
+    }
+
+    .banner-text {
+        text-align: left;
+    }
+
+    .home-tutors.down {
+        margin-top: 30px;
+    }
+
+    .banner-text .call-to-action {
+        justify-content: flex-start;
+    }
+
+    .about-team-box .content {
+        min-height: auto;
+        padding: 15px;
+        padding-top: 50px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    html {
+        font-size: 13px;
+    }
+    
+    body {
+        padding-bottom: 62px;
+    }
+    
+    section {
+        padding: 40px 0;
+    }
+    
+    #fixed_enquiry_btn {
+        right: 10px;
+        bottom: 70px;
+    }
+    
+    .section-title p {
+        font-size: 150%;
+        margin-bottom: 15px;
+    }
+    
+    .banner-text .call-to-action {
+        font-size: 140%;
+    }
+
+    .level_2_menu {
+        text-align: left;
+        padding-left: 50px;
+    }
+
+    .navbar-brand > img {
+        height: 50px;
+    }
+
+    .banner-text .title {
+        font-size: 220%;
+    }
+
+    .banner-form .title {
+        font-size: 120%;
+    }
+
+    .banner-text .location-list li p {
+        font-size: 100%;
+    }
+    
+    .counters {
+        padding: 0 15px;
+    }
+    
+    .counters .col-xs-4 {
+        padding: 0;
+    }
+    
+    .counters_box .icon {
+        display: none;
+    }
+    
+    .counters_box .count_title {
+        font-size: 80%;
+    }
+    
+    .counters .col-xs-4:nth-child(2) .counters_box {
+        border-right: 1px dashed #f1f1f1;
+        border-left: 1px dashed #f1f1f1;
+    }
+
+    .about-mission, .google_rating_box {
+        display: block;
+    }
+    
+    .home-tutors {
+        display: flex;
+    }
+    
+    .home-tutors .num {
+        width: 50px;
+        height: 50px;
+        margin-right: 30px;
+    }
+    
+    .home-tutors .mb_right {
+        width: calc(100% - 100px);
+    }
+    
+    .google_rating_box .content {
+        /* text-align: center; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .google_rating_box .icon img {
+        width: 64px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .about-mission .icon,
+    .about-mission .content {
+        padding: 15px;
+    }
+    
+    .google_rating_box .content .count_box {
+        display: block;
+    }
+    
+    .google_rating_box .content .title {
+        font-size: 150%;
+        margin-right: 20px;
+    }
+    
+    .google_rating_box .content .title span {
+        font-size: 80%;
+    }
+    
+    .google_rating_box .content .count_box .rating i {
+        font-size: 120%;
+    }
+    
+    .google_rating_box .content .count {
+        font-size: 150%;
+    }
+    
+    .google_rating_box .icon img {
+        width: 48px;
+    }
+    
+    .services-offer {
+        min-height: 150px;
+    }
+}
+
+@media (max-width: 425px) {
+   .book-free-class{ 
+    width:90%; 
+} 
+
+.online-class-banner .banner-text {
+    padding: 10px 40px 40px 40px;
+}
+}

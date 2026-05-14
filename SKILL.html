@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Footwear Master Data — Single Page Form</title>
+  <style>
+    :root{--bg:#f6f7fb;--card:#fff;--muted:#666}
+    body{font-family:Inter,system-ui,Arial;background:var(--bg);margin:0;padding:32px}
+    .container{max-width:1100px;margin:0 auto}
+    h1{margin:0 0 18px;font-size:20px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(20,20,50,0.06);margin-bottom:18px}
+    .row{display:flex;gap:12px;flex-wrap:wrap}
+    .col{flex:1 1 240px;min-width:220px}
+    label{display:block;font-size:13px;margin-bottom:6px;color:#222}
+    select,input[type=text],textarea{width:100%;padding:8px;border:1px solid #e3e6ef;border-radius:8px;font-size:14px}
+    .multicheck{display:flex;flex-direction:column;gap:6px;max-height:200px;overflow:auto;padding-right:6px}
+    .muted{font-size:13px;color:var(--muted)}
+    button{background:#0b6cff;color:#fff;padding:10px 14px;border:0;border-radius:8px;font-weight:600;cursor:pointer}
+    pre{background:#0f1724;color:#fff;padding:12px;border-radius:8px;overflow:auto}
+    .wide{flex-basis:100%}
+    .small{flex-basis:160px}
+    .note{font-size:13px;color:#444;margin-top:6px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Footwear Master Data — Single Page Form</h1>
+    <div class="card">
+      <form id="masterForm">
+
+        <div class="row">
+          <div class="col">
+            <label>Footwear Category</label>
+            <select id="footwearCategory" name="footwearCategory">
+              <option value="">-- select --</option>
+              <option>Safety</option>
+              <option>Fashion</option>
+              <option>Sports</option>
+              <option>Riding</option>
+            </select>
+            <div class="muted">single select</div>
+          </div>
+
+          <div class="col">
+            <label>Consumer Category</label>
+            <select id="consumerCategory" name="consumerCategory">
+              <option value="">-- select --</option>
+              <option>Men</option>
+              <option>Women</option>
+              <option>Kid</option>
+            </select>
+          </div>
+
+          <div class="col small">
+            <label>Construction (multi)</label>
+            <div class="multicheck" id="constructionList">
+              <label><input type="checkbox" name="construction" value="Stuck on"> Stuck on</label>
+              <label><input type="checkbox" name="construction" value="Goodyearwelted"> Goodyearwelted</label>
+              <label><input type="checkbox" name="construction" value="Stitch down"> Stitch down</label>
+              <label><input type="checkbox" name="construction" value="Strobel construction"> Strobel construction</label>
+              <label><input type="checkbox" name="construction" value="DIP construction"> DIP construction</label>
+              <label><input type="checkbox" name="construction" value="DVP/vulcanized"> DVP/vulcanized</label>
+              <label><input type="checkbox" name="construction" value="Stitch & Turn construction"> Stitch & Turn construction</label>
+            </div>
+          </div>
+        </div>
+
+        <hr style="margin:14px 0">
+
+        <div class="row">
+          <div class="col wide">
+            <label>Material Category</label>
+            <select id="materialCategory" name="materialCategory">
+              <option value="">-- select --</option>
+              <option>Leather</option>
+              <option>Upper Lining</option>
+              <option>Padding</option>
+              <option>Stiffener</option>
+              <option>Strobel</option>
+              <option>Thread</option>
+              <option>Webbing</option>
+              <option>Pull Tag</option>
+              <option>Reinforcement</option>
+              <option>Label</option>
+              <option>Logo</option>
+              <option>Molded Components</option>
+              <option>Metal Fitting</option>
+              <option>PVC Fitting</option>
+              <option>Piping</option>
+              <option>Elastic</option>
+              <option>Velcro Hook & Loop</option>
+              <option>Zipper</option>
+              <option>Shoe Last</option>
+              <option>Toe Caps</option>
+              <option>Insole Sheet</option>
+              <option>Sole</option>
+              <option>Socks</option>
+              <option>Shoe Lace</option>
+              <option>Inner Box</option>
+              <option>Outer Box</option>
+              <option>Tissue Paper</option>
+              <option>Shoe Tag</option>
+              <option>Carry Bag</option>
+              <option>Label</option>
+              <option>Adhesive Tape</option>
+              <option>Adhesive Chemicals</option>
+              <option>Sole Color Pigments</option>
+              <option>Shoe Finish</option>
+              <option>General Items</option>
+              <option>Machine Parts</option>
+            </select>
+            <div class="note">Pick the high-level material area. You can later specify sub-materials below.</div>
+          </div>
+        </div>
+
+        <hr style="margin:14px 0">
+
+        <div class="row">
+          <div class="col">
+            <label>Sub Material</label>
+            <select id="subMaterial" name="subMaterial">
+              <option value="">-- select --</option>
+              <optgroup label="Cow Leather">
+                <option>Cow Nubuck Leather</option>
+                <option>Cow Waxy Leather</option>
+                <option>Cow Split Leather</option>
+                <option>Cow Crazy Horse Leather</option>
+                <option>Cow Nappa Leather</option>
+                <option>Cow Crunch Leather</option>
+                <option>Cow Reptile Print Leather</option>
+                <option>Cow Softy Leather</option>
+                <option>Cow Milled Leather</option>
+                <option>Other- Self Fill</option>
+              </optgroup>
+              <optgroup label="Buff Leather">
+                <option>Buff Apollo Din Leather</option>
+                <option>Buff Apollo Leather</option>
+                <option>Buff CG Leather</option>
+                <option>Buff CG Din Leather</option>
+                <option>Buff Barton Leather</option>
+                <option>Buff Din Barton Leather</option>
+                <option>Buff Crazy Horse Leather</option>
+                <option>Buff Football Print Leather</option>
+                <option>Buff Roller Coaster Leather</option>
+                <option>Buff Mild Leather</option>
+                <option>Buff Split Leather</option>
+                <option>Buff Split Elephant Leather</option>
+                <option>Buff Suede Leather</option>
+                <option>Buff Tango Leather</option>
+                <option>Other Self Fill</option>
+              </optgroup>
+              <optgroup label="Goat Leather">
+                <option>Goat Waxy Leather</option>
+                <option>Goat Nappa Leather</option>
+                <option>Goat Crunch Leather</option>
+                <option>Goat Two- Tone Leather</option>
+                <option>Other- Self Fill</option>
+              </optgroup>
+
+              <optgroup label="Sheep Leather">
+                <option>Sheep Waxy Leather</option>
+                <option>Sheep Nappa Leather</option>
+                <option>Sheep Crunch Leather</option>
+                <option>Sheep Two- Tone Leather</option>
+              </optgroup>
+
+              <optgroup label="Fabric Lining / Textile">
+                <option>Spacer Fabric</option>
+                <option>Gallop Mesh Fabric</option>
+                <option>Suede Fabric</option>
+                <option>Cotton Checks Fabric</option>
+                <option>Cordura Fabric</option>
+                <option>Cambrelle Fabric</option>
+                <option>Lycra Fabric</option>
+                <option>Micro Lycra Fabric</option>
+                <option>Drytex Fabric</option>
+                <option>Drylex Fabric</option>
+                <option>Nylex Fabric</option>
+                <option>French Terry Fabric</option>
+                <option>Charcoal Cotton Fleece</option>
+                <option>Muslin Woven Fabric</option>
+                <option>Other- self fill</option>
+              </optgroup>
+
+              <optgroup label="Synthetic / Lining">
+                <option>PU Synthetic</option>
+                <option>PVC Synthetic</option>
+                <option>Microfiber Synthetic</option>
+                <option>Micro Lycra Synthetic</option>
+                <option>Tricot Synthetic</option>
+                <option>Drytex Synthetic</option>
+                <option>Nylex Synthetic</option>
+                <option>Other</option>
+              </optgroup>
+
+              <optgroup label="Padding / Foam">
+                <option>PU Foam Sheet</option>
+                <option>Eva sheet</option>
+                <option>Latex Sheet</option>
+                <option>Armour</option>
+              </optgroup>
+
+              <optgroup label="Stiffener / Counters">
+                <option>Counter Stiffener/ TP Sheet</option>
+                <option>Toe Puff Stiffener/ Pingpong</option>
+                <option>Thermoplastic Sheet</option>
+                <option>Leather Board</option>
+              </optgroup>
+
+              <optgroup label="Thread / Webbing">
+                <option>Nylon Thread</option>
+                <option>Polyester Thread</option>
+                <option>Cotton Thread</option>
+                <option>Bonded Thread</option>
+                <option>Narrow Fabric Webbing</option>
+                <option>Polyester-Lycra Webbing</option>
+                <option>Nylon Webbing</option>
+                <option>Cotton Webbing</option>
+              </optgroup>
+
+              <optgroup label="Other Items">
+                <option>Pull Tag</option>
+                <option>Reinforcement Tape</option>
+                <option>Label (Tafeta/Sticker/Heat transfer)</option>
+                <option>Logo (Branding/Non-Branding)</option>
+                <option>Molded Components (Quarter/Counter/Toe)</option>
+                <option>Metal Fitting</option>
+                <option>PVC Fitting</option>
+                <option>Piping (Leather/PVC/PU/Reflective)</option>
+                <option>Elastic</option>
+                <option>Velcro hook and loop</option>
+                <option>Zipper</option>
+                <option>Shoe Last</option>
+                <option>Toe Caps (Steel/Composite)</option>
+                <option>Insole Sheet (Molded Midsole/Steel/Texon)</option>
+                <option>Sole (Branded/Non-branded/Customer mould in material)</option>
+                <option>Socks</option>
+                <option>Shoe Lace</option>
+                <option>Inner box / Outer box</option>
+                <option>Tissue Paper</option>
+                <option>Shoe Tag</option>
+                <option>Carry Bag</option>
+                <option>Adhesive Tape</option>
+                <option>Adhesive Chemicals</option>
+                <option>Sole Color Pigments</option>
+                <option>Shoe Finish</option>
+                <option>General Items</option>
+                <option>Machine Spare Parts</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div class="col">
+            <label>Sub-Sub Material (detailed)</label>
+            <select id="subSubMaterial" name="subSubMaterial">
+              <option value="">-- select --</option>
+              <option>Cow Nubuck Leather</option>
+              <option>Cow Waxy Leather</option>
+              <option>Cow Split Leather</option>
+              <option>Cow Crazy Horse Leather</option>
+              <option>Cow Nappa Leather</option>
+              <option>Buff Apollo Din Leather</option>
+              <option>Buff CG Leather</option>
+              <option>Goat Nappa Leather</option>
+              <option>Sheep Nappa Leather</option>
+              <option>Spacer Fabric</option>
+              <option>Gallop Mesh Fabric</option>
+              <option>PU Foam Sheet</option>
+              <option>Eva sheet</option>
+              <option>Latex Sheet</option>
+              <option>Counter Stiffener/ TP Sheet</option>
+              <option>Toe Puff Stiffener/ Pingpong</option>
+              <option>Nylon</option>
+              <option>Polyester</option>
+              <option>Cotton</option>
+              <option>Bonded</option>
+              <option>Other (Self fill)</option>
+            </select>
+
+            <label style="margin-top:10px">If "Other" selected — specify</label>
+            <input type="text" id="otherDetail" placeholder="Type here if 'Other' or Self-Fill" />
+          </div>
+
+        </div>
+
+        <hr style="margin:14px 0">
+
+        <div class="row">
+          <div class="col wide">
+            <label>General Items / Machine Spare Parts (multi select)</label>
+            <div class="multicheck" id="generalItems">
+              <label><input type="checkbox" name="general" value="Thread Cutter (Golden Eagle)"> Thread Cutter (Golden Eagle)</label>
+              <label><input type="checkbox" name="general" value="Rubber Band"> Rubber Band</label>
+              <label><input type="checkbox" name="general" value="White Pencil"> White Pencil</label>
+              <label><input type="checkbox" name="general" value="Black Pencil"> Black Pencil</label>
+              <label><input type="checkbox" name="general" value="Permanent Marker"> Permanent Marker</label>
+              <label><input type="checkbox" name="general" value="Cello Tape"> Cello Tape</label>
+              <label><input type="checkbox" name="general" value="Kwick Bond"> Kwick Bond</label>
+              <label><input type="checkbox" name="general" value="Medical Cotton"> Medical Cotton</label>
+              <label><input type="checkbox" name="general" value="Surgical Gloves"> Surgical Gloves</label>
+              <label><input type="checkbox" name="general" value="Rubber Gloves"> Rubber Gloves</label>
+              <label><input type="checkbox" name="general" value="Mouth Mask"> Mouth Mask</label>
+              <label><input type="checkbox" name="general" value="Spray Gun"> Spray Gun</label>
+              <label><input type="checkbox" name="general" value="Tag Pin"> Tag Pin</label>
+              <label><input type="checkbox" name="general" value="Nylon Belt"> Nylon Belt</label>
+              <label><input type="checkbox" name="general" value="V-Belt"> V-Belt</label>
+              <label><input type="checkbox" name="general" value="Needle"> Needle</label>
+              <label><input type="checkbox" name="general" value="Bobbin"> Bobbin</label>
+              <label><input type="checkbox" name="general" value="Feed Roll"> Feed Roll</label>
+              <label><input type="checkbox" name="general" value="Other"> Other</label>
+            </div>
+          </div>
+        </div>
+
+        <hr style="margin:14px 0">
+
+        <div class="row">
+          <div class="col">
+            <label>SKU / Part Code</label>
+            <input type="text" id="sku" name="sku" placeholder="Optional: SKU or Part Code" />
+          </div>
+
+          <div class="col">
+            <label>Brand</label>
+            <input type="text" id="brand" name="brand" placeholder="Brand name (optional)" />
+          </div>
+
+          <div class="col">
+            <label>Color / Finish</label>
+            <input type="text" id="color" name="color" placeholder="Color or finish details" />
+          </div>
+        </div>
+
+        <div style="margin-top:14px;display:flex;gap:10px;align-items:center">
+          <button type="button" onclick="handleSubmit()">Generate JSON</button>
+          <div class="muted">Click to collect data and display JSON below (no network calls)</div>
+        </div>
+
+      </form>
+    </div>
+
+    <div class="card">
+      <h3>Form Output (JSON)</h3>
+      <pre id="output">{}</pre>
+    </div>
+
+  </div>
+
+  <script>
+    function collectChecked(name){
+      const els = Array.from(document.querySelectorAll('input[name="'+name+'"]:checked'));
+      return els.map(e=>e.value);
+    }
+
+    function handleSubmit(){
+      const data = {
+        footwearCategory: document.getElementById('footwearCategory').value,
+        consumerCategory: document.getElementById('consumerCategory').value,
+        construction: collectChecked('construction'),
+        materialCategory: document.getElementById('materialCategory').value,
+        subMaterial: document.getElementById('subMaterial').value,
+        subSubMaterial: document.getElementById('subSubMaterial').value,
+        otherDetail: document.getElementById('otherDetail').value,
+        generalItems: collectChecked('general'),
+        sku: document.getElementById('sku').value,
+        brand: document.getElementById('brand').value,
+        color: document.getElementById('color').value
+      };
+
+      // Show pretty JSON
+      document.getElementById('output').textContent = JSON.stringify(data,null,2);
+      // Also log for developer inspection
+      console.log('Form data',data);
+    }
+
+    // small UX: if user selects "Other" in general items, show prompt
+    document.getElementById('generalItems').addEventListener('change', (e)=>{
+      // noop for now - placeholder if needed
+    });
+  </script>
+</body>
+</html>
